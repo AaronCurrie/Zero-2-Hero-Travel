@@ -42,6 +42,18 @@ nav {
     height: 10vh; 
 }
 
+.mobile {
+    display: none;
+}
+
+#mobileMenu {
+    width: 10%;
+}
+
+#mobileMenu img {
+    width: 100%;
+}
+
 .nav a{
     text-decoration: none;
     color: rgb(4, 54, 56);
@@ -64,8 +76,7 @@ nav ul {
 }
 
 .logo {
-    height: auto;
-    width: 20%;
+    width: 200px;
     animation: fadein 4s, grow 4s;
 }
 
@@ -93,6 +104,7 @@ nav ul {
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 0px 35%;
+    
 }
 
 .info {
@@ -103,6 +115,7 @@ nav ul {
     gap: 20px;
     align-items: center;
     text-align: center;
+    animation: fadein 4s;
 }
 
 .btn-primary {
@@ -158,7 +171,7 @@ section {
 }
 
 .card {
-    width: 33%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -207,4 +220,59 @@ section {
 
 .tours ul{
     padding: 0px 20px;
+}
+
+@media screen and (max-width: 770px) {
+    .gallery{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav {
+        width: 95%;
+    }
+
+    .hero {
+        background-position: 0px 20%;
+    }
+    
+}
+
+@media screen and (max-width: 430px) {
+    .card {
+        width: 100%;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    .mobile {
+        display: flex;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .hero {
+        background-position: center;
+        background-size: cover;
+        justify-content: center;
+    }
+
+    .info {
+        justify-content: space-around;
+        height: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem;
+        margin-top: 30px;
+    }
 }
